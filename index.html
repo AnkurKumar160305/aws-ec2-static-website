@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ankur | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    position: fixed;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav h1 {
+    color: #38bdf8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.hero-text h2 {
+    font-size: 50px;
+}
+
+.hero-text span {
+    color: #38bdf8;
+}
+
+.hero-text p {
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Sections */
+section {
+    padding: 80px 10%;
+}
+
+/* Cards */
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Projects */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+/* Contact */
+.contact input, .contact textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h1>Portfolio</h1>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-text">
+        <h2>Hi, I'm <span>Ankur</span></h2>
+        <p>A passionate Software Developer & AI Enthusiast</p>
+        <button class="btn">Download Resume</button>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I am a Computer Science student skilled in C++, Python, AI/ML, and Web Development.
+            I love building scalable systems and solving real-world problems.
+        </p>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="card">C++</div>
+        <div class="card">Python</div>
+        <div class="card">AWS</div>
+        <div class="card">Machine Learning</div>
+        <div class="card">Web Development</div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Bug Hunter AI</h3>
+            <p>AI system that detects bugs in C++ code.</p>
+        </div>
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio deployed on AWS EC2.</p>
+        </div>
+        <div class="card">
+            <h3>Chat App</h3>
+            <p>Real-time chat application using WebSockets.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card contact">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button class="btn">Send</button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Ankur | All Rights Reserved</p>
+</footer>
+
+<script>
+// Smooth scroll
+document.querySelectorAll('a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))
+            .scrollIntoView({ behavior: 'smooth' });
+    });
+});
+</script>
+
+</body>
+</html>
